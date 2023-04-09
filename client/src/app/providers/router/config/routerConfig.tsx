@@ -1,4 +1,4 @@
-import { CardOfObject } from 'pages/CardOfObject';
+import { CardOfObjects } from 'pages/CardOfObjects';
 import { CompleteTasks } from 'pages/CompleteTasks';
 import { Dashboard } from 'pages/Dashboard';
 import { Meetings } from 'pages/Meetings';
@@ -41,6 +41,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     },
     [AppRoutes.CARD]: {
         path: RoutePaths.card,
-        element: <CardOfObject/>
+        element: <CardOfObjects/>
     }
 }

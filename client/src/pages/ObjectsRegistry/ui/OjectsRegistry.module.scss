@@ -1,0 +1,28 @@
+.content {
+    display: flex;
+    margin-top: 45px;
+    margin-right: 36px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 67px;
+    margin-right: 95px;
+    color: #000000;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
