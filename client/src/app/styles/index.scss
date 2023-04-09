@@ -1,2 +1,21 @@
 @import "reset";
 @import "variables/global";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    background-color: #F2F3F7;
+    &_main {
+        display: flex;
+        &__content {
+            margin-left: 91px;
+            width: calc(100vw - 261px);
+        }
+    }
+}
+
+.yc-checkbox_checked .yc-checkbox__indicator::before {
+    background-color: #4848FE;
+}

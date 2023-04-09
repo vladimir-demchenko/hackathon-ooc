@@ -1,13 +1,18 @@
 import { Menu } from 'widgets/Menu';
-import { Navbar } from 'widgets/Navbar';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
+import { Header } from 'widgets/Header';
 
 const App = () => {
     return (
         <div className='app'>
-            <Menu/>
-            <AppRouter/>
+            <div className='app_main'>
+                <Menu/>
+                <div className='app_main__content'>
+                    <Header/>
+                    <AppRouter/>
+                </div>
+            </div>
         </div>
     );
 };

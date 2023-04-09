@@ -1,0 +1,35 @@
+.userCardWrapper {
+    width: 100%;
+    margin-right: 36px;
+    display: flex;
+    justify-content: end;
+}
+
+.userCardFIO {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 8px 0;
+    margin-right: 19px;
+}
+
+.userCardButton {
+    border: none;
+    border-radius: 100%;
+    height: 53px;
+    width: 53px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.userCardName {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+}

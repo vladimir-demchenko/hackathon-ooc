@@ -22,6 +22,16 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         ],
     }
 
+    const rawCssLoader = {
+        test: /\.css$/,
+        use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+                loader: 'css-loader'
+            }
+        ]
+    }
+
     const typescriptLoader = {
         test:/\.tsx?$/,
         use: 'ts-loader',
@@ -29,7 +39,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     }
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ttf)$/i,
         use: [
             {
                 loader: 'file-loader'
@@ -46,6 +56,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         fileLoader,
         svgLoader,
         typescriptLoader,
+        rawCssLoader,
         cssLoader,
     ];
 }

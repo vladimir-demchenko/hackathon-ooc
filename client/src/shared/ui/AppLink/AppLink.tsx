@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { NavLink, NavLinkProps } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './AppLink.module.scss';
 
-interface AppLinkProps extends LinkProps {
+interface AppLinkProps extends NavLinkProps {
     className?: string;
 }
 
@@ -15,8 +16,8 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     } = props;
 
     return (
-        <Link to={to} className={classNames('appLink', {}, [className])} {...otherProps}>
+        <NavLink to={to} className={({isActive}) => classNames('', {[cls.active]: isActive} ,[className])} {...otherProps}>
             {children}
-        </Link>
+        </NavLink>
     );
 };
