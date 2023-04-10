@@ -1,15 +1,73 @@
+.object {
+    cursor: pointer;
+    &_address {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #000000;
+        span {
+            font-weight: 700;
+        }
+    }
+    &_zone {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #000000;
+        span {
+            font-weight: 700;
+        }
+    }
+    &_region {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #000000;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
 .card {
-    width: 444px;
-    height: 468px;
+    width: 393px;
+    height: 290px;
     background-color: #fff;
     border-radius: 30px;
     filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .list {
-    width: 1507px;
+    width: 100%;
+    margin-bottom: 30px;
     height: 209px;
     background-color: #fff;
     border-radius: 30px;
     filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .object_address {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.cardContainer {
+    margin: 20px;
+    gap: 30px;
 }

@@ -10,7 +10,9 @@ const App = () => {
                 <Menu/>
                 <div className='app_main__content'>
                     <Header/>
-                    <AppRouter/>
+                    <div className='app_main__container'>                 
+                        <AppRouter/>
+                    </div>
                 </div>
             </div>
         </div>

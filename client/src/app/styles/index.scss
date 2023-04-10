@@ -13,6 +13,11 @@
             margin-left: 91px;
             width: calc(100vw - 261px);
         }
+        &__container {
+            position: relative;
+            width: 1300px;
+            margin-left: 0 auto;
+        }
     }
 }
 

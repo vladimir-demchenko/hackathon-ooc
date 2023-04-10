@@ -11,6 +11,27 @@ interface ObjectsRegistryProps {
 
 type containerType = 'card' | 'list';
 
+const mockData: Array<Record<string, string>> = [
+  {
+    id: '1',
+    address: 'г. Москва, пр-т. Вернадского, д.78, стр. 6, кв. А-160',
+    zone: 'Юго-Западный автономный округ',
+    region: 'Тропарёво-Никулино'
+  },
+  {
+    id: '2',
+    address: 'г. Москва, пр-т. Вернадского, д.78, стр. 6, кв. А-160',
+    zone: 'Юго-Западный автономный округ',
+    region: 'Тропарёво-Никулино'
+  },
+  {
+    id: '3',
+    address: 'г. Москва, пр-т. Вернадского, д.78, стр. 6, кв. А-160',
+    zone: 'Юго-Западный автономный округ',
+    region: 'Тропарёво-Никулино'
+  },
+]
+
 export const ObjectsRegistry: FC<ObjectsRegistryProps> = (props) => {
   const [container, setContainer] = useState<containerType>('card');
 
@@ -36,9 +57,9 @@ export const ObjectsRegistry: FC<ObjectsRegistryProps> = (props) => {
         <RadioButton onChange={handelContainer} options={options}/>
       </div>
       <div className={classNames(cls.content, {[cls.card]: container === 'card', [cls.list]: container === 'list'})}>
-        <CardOfObject view={container}/>
-        <CardOfObject view={container}/>
-        <CardOfObject view={container}/>
+        {mockData.map((item)=> (
+          <CardOfObject key={item.id} data={item} view={container}/>
+        ))}
       </div>
     </div>
   );
